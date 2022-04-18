@@ -1,0 +1,116 @@
+$primaryColor : rgb(40,40,40);
+$secondaryColor : rgb(80,80,80);
+$lightColor : rgb(255,255,255);
+$serviceLogoColor : orange;
+$secondaryBackground : rgb(0,0,50);
+
+.footer {
+
+    & > * {
+        margin: 2rem 0rem;
+    }
+
+    & .footer_service {
+        padding: 0rem 2rem;
+
+        &  :is(h5,h4) {
+            color: $primaryColor;
+        }
+
+        & p {
+            color: $secondaryColor;
+        }
+
+        & > p {
+            margin: 0.75rem 0rem;
+        }
+
+        & .custom_svg {
+            width: 75%;
+            height: 75%;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 2rem;
+            color: $serviceLogoColor;
+        }
+
+        & .footer_service_details {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            justify-content: space-evenly;
+        }
+    }
+
+    & .footer_service_category {
+        background-color: $secondaryBackground;
+        padding: 2rem 3rem;
+        color: $lightColor;
+
+        & p {
+            margin: 0.5rem 0rem;
+            color: $secondaryColor;
+            cursor: pointer;
+        }
+
+        & .footer_social_media {
+            display: flex;
+            width: 100%;
+            margin: 0.7rem 0rem;
+
+            & .footer_media_link {
+                background-color: var(--background-color);
+                width: 2rem;
+                height: 2rem;
+                border-radius: 50%;
+                padding: 0.5rem;
+                margin: 0rem 0.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+            }
+        }
+    }
+
+    & .footer_service_lined {
+        padding: 0rem 2rem;
+
+        & > * {
+            margin-bottom: 1rem;
+        }
+
+        & .footer_service_links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+
+            & > p {
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    & .footer_payment {
+        padding: 0rem 2rem;
+
+        & .footer_payment_logos {
+            display: flex;
+            padding: 0.5rem 0rem;
+        }
+    }
+
+    & .footer_copyright {
+        margin-bottom: 0;
+        padding: 1rem 2rem;
+        background-color: $secondaryBackground;
+        color: $secondaryColor;
+        display: flex;
+        justify-content: center;
+    }
+}
+

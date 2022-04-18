@@ -1,0 +1,62 @@
+$carouselSpeedTime : 1s;
+
+.carousel {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    margin: 0rem 0rem 1rem 0rem;
+    border-radius: 1rem;
+
+    & > *:not(.carousel_btn_left,.carousel_btn_right,.carousel_dots){
+        height: 100%;
+        width: 100%;
+        flex : 0 0 100%;
+        transition: transform $carouselSpeedTime linear;
+    }
+
+    & .carousel_btn_left{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0%,-50%);
+        background-color: white;
+        padding: 1rem 0.5rem;
+        display: flex;
+        align-items: center;
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+    & .carousel_btn_right{
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0%,-50%);
+        background-color: white;
+        padding: 1rem 0.5rem;
+        display: flex;
+        align-items: center;
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+    }
+    & .carousel_dots {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        border-radius: 0.5rem;
+
+        & > div {
+            width: 0.4rem;
+            height: 0.4rem;
+            border-radius: 50%;
+            background-color: rgb(150,150,150);
+        }
+    }
+}
